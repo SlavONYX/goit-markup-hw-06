@@ -28,9 +28,6 @@ svg {
     display: block;
 }
 
-a{
-    transition:color:var(--rare-color) 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
 .header{
     border-bottom: 1px solid #ececec;
 }
@@ -79,6 +76,7 @@ a{
     color:var(--main-text-color);
     padding-top: 32px;
     padding-bottom: 32px;
+    transition: color:var(--rare-color) 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .nav-link:hover {
@@ -132,6 +130,7 @@ a{
     font-weight: 500;
     line-height: calc(16 / 14);
     align-items: center;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .contact-link .icon{
     margin-right: 10px;
@@ -149,8 +148,8 @@ a{
 .contact-link:hover,
 .contact-link:focus {
     color: var(--rare-color);
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    /* transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); */
 }
 
 .banner {
@@ -201,6 +200,7 @@ a{
     margin: 0 auto;
     display: block;
     border-color: transparent; 
+    transition-property: background-color;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -245,6 +245,7 @@ a{
 }
 
 .about-title{
+    font-weight: 700;
     font-size: 14px;
     line-height: calc(16 / 14);
     text-transform: uppercase;
@@ -398,13 +399,13 @@ a{
     color: rgba(255, 255, 255, 0.6);
     margin: 0;
     padding: 0;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .footer-contact:hover,
 .footer-contact:focus {
     color: var(--rare-color);
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .filter{
@@ -434,8 +435,6 @@ a{
     transition:color 250ms cubic-bezier(0.4, 0, 0.2, 1),
     background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
     box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .project-button {
@@ -562,6 +561,7 @@ a{
     fill: var(--icon-color);
     background-color: var(--background-main);
     color: var(--background-main);
+    transition-property: fill, background-color;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -603,6 +603,7 @@ a{
     fill: var(--icon-color);
     border: 1px solid var(--icon-color);
     border-radius: 4px;
+    transition-property: fill, border;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -645,7 +646,7 @@ a{
     color: var(--background-main);
 }
 
-.footer-social-networks{
+.footer-social-networks {
     width: 44px;
     height: 44px;
     display: flex;
@@ -655,6 +656,7 @@ a{
     fill: var(--background-main);
     background-color: rgba(255, 255, 255, 0.1);
     color: var(--background-main);
+    transition-property: background-color;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -662,7 +664,6 @@ a{
 .footer-social-networks:hover,
 .footer-social-networks:focus {
     background-color: var(--rare-color);
-    fill:var(--background-main);
     transform: translateY(3px);
 }
 /* 
@@ -767,6 +768,8 @@ a{
     background-color: var(--background-main);
     border: 1px solid rgba(0, 0, 0, 0.1);
     border-radius: 50%;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .close-icon {
@@ -775,10 +778,8 @@ a{
 
 .modal-close-button:hover .close-icon, 
 .modal-close-button:focus .close-icon {
-    fill: var(--main-text-color);
+    fill: var(--rare-color);
     cursor: pointer;
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .form-title {
@@ -919,15 +920,17 @@ a{
     color: var(--rare-color);
     background-color: var(--background-dark);
     border: 1px solid rgba(255, 255, 255, 0.3);
-    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+    /* filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15)); */
     border-radius: 4px;
-    transition: outline 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    transition-property: outline, border;
-    transition-duration: 250ms, 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1), cubic-bezier(0.4, 0, 0.2, 1);
-    transition-delay: 0s, 0s;
+    transition:border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.form-subscribe:hover,
+.form-subscribe:focus{
+    border: 1px solid var(--rare-color);
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
 .checkbox {
     position: absolute;
     opacity: 0;
@@ -1006,7 +1009,6 @@ a{
     background-color:var(--rare-color);
     border-color: transparent;
     border-radius: 4px;
-
     transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
     box-shadow: 0 4px 4px rgba(0, 0, 0, 0.15);
     
